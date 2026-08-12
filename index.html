@@ -342,7 +342,11 @@
     header nav{display:none;}
     .hero{padding:120px 20px 80px;}
     .hero::before{background:radial-gradient(ellipse 72% 72% at 50% 24%, rgba(201,122,61,0.16), transparent 70%);}
-    h1.headline{font-size:clamp(2.4rem,11vw,4.4rem);margin:14px 0 10px;}
+    h1.headline{
+      font-size:clamp(2.4rem,11vw,4.4rem);margin:14px 0 10px;
+      background:none;color:var(--paper);
+      -webkit-text-fill-color:var(--paper);
+    }
     .headline-sub{font-size:1rem;color:var(--paper);}
     .hero-meta{margin-top:42px;gap:16px;}
     .scroll-cue{margin-top:54px;}
