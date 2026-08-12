@@ -167,17 +167,17 @@
     font-family:var(--serif);font-weight:700;
     font-size:clamp(3.4rem,10vw,7rem);line-height:1.02;letter-spacing:-0.02em;margin:16px 0 8px;
     color:var(--paper);
-    background:linear-gradient(100deg,#FBEEDB 20%, var(--copper-bright) 45%, #FBEEDB 55%, var(--copper) 80%);
-    background-size:250% 100%;
-    -webkit-background-clip:text;
-    -webkit-text-fill-color:transparent;
+    background:none;
     animation:shimmer 6s linear infinite 2.4s;
   }
-  @supports not ((-webkit-background-clip: text) or (background-clip: text)) {
+  @supports ((-webkit-background-clip: text) or (background-clip: text)) {
     h1.headline{
-      background:none;
-      color:var(--paper);
-      -webkit-text-fill-color:var(--paper);
+      background:linear-gradient(100deg,#FBEEDB 20%, var(--copper-bright) 45%, #FBEEDB 55%, var(--copper) 80%);
+      background-size:250% 100%;
+      -webkit-background-clip:text;
+      background-clip:text;
+      -webkit-text-fill-color:transparent;
+      color:transparent;
     }
   }
   @keyframes shimmer{0%{background-position:0% 0;}100%{background-position:-250% 0;}}
