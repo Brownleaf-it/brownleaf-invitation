@@ -166,17 +166,18 @@
   h1.headline{
     font-family:var(--serif);font-weight:700;
     font-size:clamp(3.4rem,10vw,7rem);line-height:1.02;letter-spacing:-0.02em;margin:16px 0 8px;
+    color:var(--paper);
     background:linear-gradient(100deg,#FBEEDB 20%, var(--copper-bright) 45%, #FBEEDB 55%, var(--copper) 80%);
     background-size:250% 100%;
-    -webkit-background-clip:text;background-clip:text;
+    -webkit-background-clip:text;
     -webkit-text-fill-color:transparent;
-    color:var(--paper);
     animation:shimmer 6s linear infinite 2.4s;
   }
   @supports not ((-webkit-background-clip: text) or (background-clip: text)) {
     h1.headline{
       background:none;
       color:var(--paper);
+      -webkit-text-fill-color:var(--paper);
     }
   }
   @keyframes shimmer{0%{background-position:0% 0;}100%{background-position:-250% 0;}}
@@ -339,12 +340,12 @@
   @media (max-width:720px){
     .details-grid{grid-template-columns:1fr;}
     header nav{display:none;}
-    .hero{padding:140px 24px 90px;}
-    .hero::before{background:radial-gradient(ellipse 65% 65% at 50% 24%, rgba(201,122,61,0.18), transparent 70%);}
-    h1.headline{font-size:clamp(2.6rem,12vw,5rem);margin:14px 0 10px;}
+    .hero{padding:120px 20px 80px;}
+    .hero::before{background:radial-gradient(ellipse 72% 72% at 50% 24%, rgba(201,122,61,0.16), transparent 70%);}
+    h1.headline{font-size:clamp(2.4rem,11vw,4.4rem);margin:14px 0 10px;}
     .headline-sub{font-size:1rem;color:var(--paper);}
-    .hero-meta{margin-top:48px;gap:18px;}
-    .scroll-cue{margin-top:60px;}
+    .hero-meta{margin-top:42px;gap:16px;}
+    .scroll-cue{margin-top:54px;}
   }
 </style>
 </head>
